@@ -1,8 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker_go'
+- name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/hello-world-360303/github/betrand2470/gcp-node-app:$$SHORT_SHA', '.' ]
 
-- name: 'gcr.io/cloud-builders/docker_go'
+- name: 'gcr.io/cloud-builders/docker'
   args: [ 'push', 'gcr.io/hello-world-360303/github/betrand2470/gcp-node-app:$$SHORT_SHA' ]
   
 #   id: 'go-clock-build'
