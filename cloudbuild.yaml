@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker_go'
+  args: [ 'build', '-t', 'gcr.io/hello-world-360303/github/betrand2470/gcp-node-app:$$SHORT_SHA', '.' ]
+
+- name: 'gcr.io/cloud-builders/docker_go'
+  args: [ 'push', 'gcr.io/hello-world-360303/github/betrand2470/gcp-node-app:$$SHORT_SHA' ]
+  
+#   id: 'go-clock-build'
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   args: ['beta', 'run', 'deploy', 'godocker', '--image', 'gcr.io/[PROJECT_ID]/go_docker_20200129:$_ENV-$SHORT_SHA', '--region','asia-northeast1', '--platform', 'managed', '--allow-unauthenticated']
+#   images: ['gcr.io/[PROJECT_ID]/go_docker_20200129:$_ENV-$SHORT_SHA']
